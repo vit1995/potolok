@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<style>
+		body {
+			opacity: 1;
+		}
+	</style>
+	<!-- <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?_v=20250813175216"
+    rel="stylesheet"
+  /> -->
+
+	<link rel="stylesheet" href="css/style.min.css?_v=20250813175216" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<a href="home.html" class="header__logo"><img src="img/header/logo.svg" alt="#" /></a>
+					<div class="header__main">
+						<div class="header__top">
+							<div class="header__buttons">
+								<a data-popup="#popup" class="header__button button button--white" href="#">Заказать звонок</a>
+								<a data-da=".menu, 480" class="header__button header__button--red button button--red" href="#" data-popup="#popup-two">Вызвать замерщика</a>
+							</div>
+							<div data-da=".contact-header, 768" class="header__tools">
+								<a data-goto-header data-goto="#calc" class="header__tools-link" href="">
+									<i class="icon-calculator"></i>
+									<span>Калькулятор</span>
+								</a>
+								<a class="header__tools-link" href="page-installment.html">
+									<i class="icon-phone"></i>
+									<span>Рассрочка</span></a>
+							</div>
+						</div>
+
+						<div class="header__menu menu">
+							<h3 class="menu__title">Меню</h3>
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<li class="menu__item">
+										<a href="home.html" class="menu__link">Акции </a>
+									</li>
+									<li class="menu__item">
+										<a href="price.html" class="menu__link">Цены</a>
+									</li>
+
+									<li class="menu__item menu__item--catalog">
+										<span href="" class="menu__link">
+											Каталог
+											<img src="img/header/arrow-menu.svg" alt="#" />
+										</span>
+										<div class="submenu-catalog">
+											<div class="menu__header">
+												<button class="submenu-catalog__close icon-arrow-left"></button>
+												<span> Каталог</span>
+											</div>
+
+											<div class="submenu-catalog__item">
+												<h3 class="submenu-catalog__title">Фактуры</h3>
+												<ul class="submenu-catalog__list">
+													<!-- <li class="close"></li> -->
+													<div class="menu__header-sub menu__header">
+														<button class="submenu-catalog__list-close icon-arrow-left"></button>
+														<span>Фактуры</span>
+													</div>
+													<li><a href="catalog.html">Матовые</a></li>
+													<li><a href="#">Сатиновые</a></li>
+													<li><a href="#">Тканевые</a></li>
+													<li><a href="#">Глянцевые</a></li>
+													<li>
+														<a href="#">Премиум-класса</a>
+													</li>
+													<li><a href="#">Фактурные</a></li>
+													<li>
+														<a href="#">Гипоаллергенные</a>
+													</li>
+													<li>
+														<a href="#">Cold Stretch</a>
+													</li>
+													<li><a href="#">Негорючие</a></li>
+													<li>
+														<a href="#">Натяжные потолки под ключ</a>
+													</li>
+												</ul>
+											</div>
+											<div class="submenu-catalog__item">
+												<h3 class="submenu-catalog__title">Расчёты</h3>
+												<ul class="submenu-catalog__list">
+													<div class="menu__header-sub menu__header">
+														<button class="submenu-catalog__list-close icon-arrow-left"></button>
+														<span>Расчёты</span>
+													</div>
+													<li><a href="#">На кухню</a></li>
+													<li><a href="#">В ванную</a></li>
+													<li><a href="#">В гостиную</a></li>
+													<li><a href="#">В детскую</a></li>
+													<li><a href="#">В спальню</a></li>
+													<li><a href="#">В прихожую</a></li>
+													<li><a href="#">В частный дом</a></li>
+												</ul>
+											</div>
+											<div class="submenu-catalog__item">
+												<h3 class="submenu-catalog__title">Технологии</h3>
+												<ul class="submenu-catalog__list">
+													<div class="menu__header-sub menu__header">
+														<button class="submenu-catalog__list-close icon-arrow-left"></button>
+														<span>Технологии</span>
+													</div>
+													<li><a href="#">Матовые</a></li>
+													<li><a href="#">Сатиновые</a></li>
+													<li><a href="#">Тканевые</a></li>
+													<li><a href="#">Глянцевые</a></li>
+													<li><a href="#">Премиум-класса</a></li>
+													<li><a href="#">Фактурные</a></li>
+													<li><a href="#">Гипоаллергенные</a></li>
+													<li><a href="#">Cold Stretch</a></li>
+													<li><a href="#">Негорючие</a></li>
+													<li><a href="#">Натяжные потолки под ключ</a></li>
+												</ul>
+											</div>
+											<div class="submenu-catalog__item">
+												<h3 class="submenu-catalog__title">Производители</h3>
+												<ul class="submenu-catalog__list">
+													<div class="menu__header-sub menu__header">
+														<button class="submenu-catalog__list-close icon-arrow-left"></button>
+														<span>Производители</span>
+													</div>
+													<li><a href="#">Bauf</a></li>
+													<li><a href="#">LUMFER</a></li>
+													<li><a href="#">Полотна MSD</a></li>
+													<li><a href="#">Descor</a></li>
+													<li><a href="#">Clipso</a></li>
+													<li><a href="#">TEQTUM</a></li>
+													<li><a href="#">Немецкие</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+
+									<li class="menu__item">
+										<a href="work.html" class="menu__link">Наши работы</a>
+									</li>
+
+									<li class="menu__item">
+										<a href="reviews.html" class="menu__link"> Отзывы </a>
+									</li>
+									<li class="menu__item">
+										<a href="contact.html" class="menu__link"> Контакты </a>
+									</li>
+									<li class="menu__item">
+										<a href="blog.html" class="menu__link">
+											Блог
+											<!-- <img src="img/header/arrow-menu.svg" alt="#" /> -->
+										</a>
+
+										<!-- <ul class="submenu">
+                  <div class="submenu__header menu__header">
+                    <button
+                      class="submenu-close close icon-arrow-left"
+                    ></button>
+                    <span> О компании</span>
+                  </div>
+                  <li><a href="#">Доставка и оплата</a></li>
+                  <li><a href="#">Рассрочка</a></li>
+                  <li><a href="#">Блог</a></li>
+                  <li><a href="#">Публичная оферта</a></li>
+                  <li><a href="#">Вакансии</a></li>
+                  <li><a href="#">Приют</a></li>
+                </ul> -->
+									</li>
+								</ul>
+							</nav>
+							<button type="button" class="menu__icon menu__icon-phone icon-menu">
+								<span></span>
+							</button>
+						</div>
+					</div>
+					<div data-da=".header, 1150,0" class="header__contact contact-header">
+						<div class="contact-header__item">
+							<a class="contact-header__phone" href="tel:84993977620">8 (499) 397-76-20</a>
+							<p data-da=".menu, 768" class="contact-header__clock">
+								пн-вс: c 9:00 до 21:00
+							</p>
+						</div>
+						<div data-da=".menu, 768" class="contact-header__item contact-header__item--phone">
+							<div class="contact-header__address">Химки, 9 мая, 12Д</div>
+							<p class="contact-header__addres-local">(напротив Леруа Мерлен)</p>
+						</div>
+					</div>
+					<button type="button" class="menu__icon icon-menu">
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+							<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+						</svg>
+					</button>
+					<div class="popup__body">
+						<h2 class="popup__title">Закажите звонок</h2>
+						<p class="popup__text">
+							И наш менеджер перезвонит Вам в ближайшее время
+						</p>
+						<form data-ajax data-popup-message="#form-message" class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-inputmask="'mask':'375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="popup__input input" />
+							<div class="checkbox">
+								<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="согласен" name="check" checked />
+								<label for="c_5" class="checkbox__label"><span class="checkbox__text">Соглашаюсь с
+										<a href="/privacy.html" target="_blank">условиями</a> обработки
+										персональных данных
+									</span></label>
+							</div>
+							<button type="submit" class="popup__button button button--yellow">
+								Заказать звонок
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-two" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+							<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+						</svg>
+					</button>
+					<div class="popup__body">
+						<h2 class="popup__title">Закажите бесплатный выезд замерщика</h2>
+						<p class="popup__text">Заполните форму для вызова замерщика</p>
+						<form data-ajax data-popup-message="#form-message" class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-inputmask="'mask':'375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="popup__input input" />
+							<div class="checkbox">
+								<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="согласен" name="check" checked />
+								<label for="c_6" class="checkbox__label"><span class="checkbox__text">Соглашаюсь с
+										<a href="/privacy.html" target="_blank">условиями</a> обработки
+										персональных данных
+									</span></label>
+							</div>
+							<button type="submit" class="popup__button button button--yellow">
+								Заказать звонок
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-three" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+							<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+						</svg>
+					</button>
+					<div class="popup__body">
+						<h2 class="popup__title">Воспользуйтесь предложением</h2>
+						<p class="popup__text">Для этого заполните форму</p>
+						<form data-ajax data-popup-message="#form-message" class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-inputmask="'mask':'375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="popup__input input" />
+							<div class="checkbox">
+								<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="согласен" name="check" checked />
+								<label for="c_7" class="checkbox__label"><span class="checkbox__text">Соглашаюсь с
+										<a href="/privacy.html" target="_blank">условиями</a> обработки
+										персональных данных
+									</span></label>
+							</div>
+							<button type="submit" class="popup__button button button--yellow">
+								Заказать звонок
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-four" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+							<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+						</svg>
+					</button>
+					<div class="popup__body">
+						<h2 class="popup__title">Заказать натяжные потолки в рассрочку</h2>
+						<form data-ajax data-popup-message="#form-message" class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-inputmask="'mask':'375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="popup__input input" />
+							<div class="checkbox">
+								<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="согласен" name="check" checked />
+								<label for="c_9" class="checkbox__label"><span class="checkbox__text">Соглашаюсь с
+										<a href="/privacy.html" target="_blank">условиями</a> обработки
+										персональных данных
+									</span></label>
+							</div>
+							<button type="submit" class="popup__button button button--yellow">
+								Заказать звонок
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-five" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+							<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+						</svg>
+					</button>
+					<div class="popup__body">
+						<h2 class="popup__title">Рассчитайте стоимость натяжного потолка</h2>
+						<p class="popup__text">
+							Оставьте заявку и получите подарок от компании NOVA
+						</p>
+						<form data-ajax data-popup-message="#form-message" class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-inputmask="'mask':'375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="popup__input input" />
+							<div class="checkbox">
+								<input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="согласен" name="check" checked />
+								<label for="c_10" class="checkbox__label"><span class="checkbox__text">Соглашаюсь с
+										<a href="/privacy.html" target="_blank">условиями</a> обработки
+										персональных данных
+									</span></label>
+							</div>
+							<button type="submit" class="popup__button button button--yellow">
+								Заказать звонок
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-six" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+							<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+						</svg>
+					</button>
+					<div class="popup__body">
+						<h2 class="popup__title">Задать вопрос</h2>
+						<p class="popup__text">Напишите интересующий Вас вопрос</p>
+						<form data-ajax data-popup-message="#form-message" class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-inputmask="'mask':'375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="popup__input input" />
+							<textarea data-required autocomplete="off" name="text" placeholder="Ваш комментарий" data-error="Напишите комментарий" class="input" data-autoheight data-autoheight-min="150" data-autoheight-max="330"></textarea>
+							<div class="checkbox">
+								<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="согласен" name="check" checked />
+								<label for="c_8" class="checkbox__label"><span class="checkbox__text">Соглашаюсь с
+										<a href="/privacy.html" target="_blank">условиями</a> обработки
+										персональных данных
+									</span></label>
+							</div>
+							<button type="submit" class="popup__button button button--yellow">
+								Заказать звонок
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="form-message" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+							<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+						</svg>
+					</button>
+					<div class="popup__body">
+						<h2 class="popup__title" style="
+            color: red;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+          ">
+							Спасибо, ваша форма успешно отправлена!
+						</h2>
+						<style>
+							@keyframes fadeIn {
+								from {
+									opacity: 0;
+									transform: translateY(-10px);
+								}
+
+								to {
+									opacity: 1;
+									transform: translateY(0);
+								}
+							}
+						</style>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-seven" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+							<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+						</svg>
+					</button>
+					<div class="popup__body">
+						<h2 class="popup__title">Оставить отзыв</h2>
+
+						<form data-ajax data-popup-message="#form-message" class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-inputmask="'mask':'375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="popup__input input" />
+							<textarea data-required autocomplete="off" name="text" placeholder="Ваш комментарий" data-error="Напишите комментарий" class="input" data-autoheight data-autoheight-min="150" data-autoheight-max="330"></textarea>
+							<div class="checkbox">
+								<input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="согласен" name="check" checked />
+								<label for="c_11" class="checkbox__label"><span class="checkbox__text">Соглашаюсь с
+										<a href="/privacy.html" target="_blank">условиями</a> обработки
+										персональных данных
+									</span></label>
+							</div>
+							<button type="submit" class="popup__button button button--yellow">
+								Заказать звонок
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<main class="page page-price">
+			<div class="price-table">
+				<div class="table__container">
+					<div class="wrap-table">
+						<div class="table">
+							<table>
+								<thead>
+									<tr>
+										<th>Наименование</th>
+										<th>Количество</th>
+										<th>Стоимость</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Обвод трубы диаметром более 50 мм</td>
+										<td>1 шт.</td>
+										<td>Договорная</td>
+									</tr>
+									<tr>
+										<td>Установка каркаса под люстру потолочную</td>
+										<td>1 шт.</td>
+										<td>Бесплатно</td>
+									</tr>
+									<tr>
+										<td>Отверстия под люстру крючковую с окантовкой</td>
+										<td>1 шт.</td>
+										<td>Бесплатно</td>
+									</tr>
+									<tr>
+										<td>Крючок для люстры с установкой</td>
+										<td>1 шт.</td>
+										<td>Бесплатно</td>
+									</tr>
+									<tr>
+										<td>
+											Установка каркаса под точечный светильник + разметка +
+											монтаж и подключение самого светильника
+										</td>
+										<td>1 шт.</td>
+										<td>от 5 руб.</td>
+									</tr>
+									<tr>
+										<td>Проводка электрического кабеля</td>
+										<td>1 м.п.</td>
+										<td>Входит в стоимость точки;</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Установка крепежа в керамогранит</td>
+										<td>1 м.п.</td>
+										<td>от 5 руб.</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<p></p>
+						</div>
+						<div class="table">
+							<table>
+								<thead>
+									<tr>
+										<th>Наименование</th>
+										<th>Количество</th>
+										<th>Стоимость</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											Установка вентиляционной решетки в потолок диам. 50 мм
+										</td>
+										<td>1 шт.</td>
+										<td>15 руб.</td>
+									</tr>
+									<tr>
+										<td>
+											Установка вентиляционной решетки в потолок диам. 100 мм
+										</td>
+										<td>1 шт.</td>
+										<td>20 руб.</td>
+									</tr>
+									<tr>
+										<td>
+											Установка вентиляционной решетки в потолок диам. 126 мм
+										</td>
+										<td>1 шт.</td>
+										<td>25 руб.</td>
+									</tr>
+									<tr>
+										<td>Дополнительный выезд бригады</td>
+										<td></td>
+										<td>65 руб./1 выезд</td>
+									</tr>
+									<tr>
+										<td>Криволинейность потолка</td>
+										<td>м.п.</td>
+										<td>от 2 руб.</td>
+									</tr>
+									<tr>
+										<td>
+											Больше 10 углов в одном помещении (сложный монтаж)
+										</td>
+										<td></td>
+										<td>15 руб.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="card">
+				<div class="card__container">
+					<h2 class="card__title title">Рассрочка на натяжные потолки</h2>
+					<div class="card__items">
+						<div class="card__item">
+							<img class="card__image" src="img/card/01.jpg" alt="#" />
+							<div class="card__name">Черепаха</div>
+							<div class="card__month">8 месяцев</div>
+						</div>
+						<div class="card__item">
+							<img class="card__image" src="img/card/02.jpg" alt="#" />
+							<div class="card__name">Карта FUN</div>
+							<div class="card__month">3 месяца</div>
+						</div>
+						<div class="card__item">
+							<img class="card__image" src="img/card/03.jpg" alt="#" />
+							<div class="card__name">Халва</div>
+							<div class="card__month">4 месяца</div>
+						</div>
+						<div class="card__item">
+							<img class="card__image" src="img/card/04.jpg" alt="#" />
+							<div class="card__name">Карта покупок</div>
+							<div class="card__month">2 месяца</div>
+						</div>
+						<div class="card__item">
+							<img class="card__image" src="img/card/05.jpg" alt="#" />
+							<div class="card__name">Магнит</div>
+							<div class="card__month">3 месяца</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="price">
+				<div class="price__container">
+					<h2 class="price__title title">
+						Цены на натяжные потолки за 1 м2 в Москве
+					</h2>
+					<p class="price__subtitle">
+						Используем только сертифицированные полотна, которые разрешены в
+						жилых помещениях
+					</p>
+					<!-- Оболонка слайдера -->
+					<div class="price__slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+						<!-- Частина слайдера, що рухається -->
+						<div class="price__wrapper swiper-wrapper price__items">
+							<!-- Слайд -->
+							<div class="price__slide swiper-slide swiper-slide-active">
+								<div class="price__item">
+									<div class="price__top">
+										<h3 class="price__name">MSD Classic</h3>
+										<div class="price__firm">
+											<img src="img/price/msd.png" alt="#" />
+										</div>
+									</div>
+									<div class="price__number-body">
+										<div class="price__number">от 299 руб/<sup>2</sup></div>
+										<div class="price__number-icon">
+											<img src="img/price/best-price.svg" alt="#" />
+										</div>
+									</div>
+									<div class="price__colors-body">
+										<div class="price__colors-item">
+											<div class="price__color">белый</div>
+											<div class="price__color">цветной</div>
+										</div>
+										<img class="price__flag" src="img/price/china.svg" alt="#" />
+									</div>
+									<div class="price__size">
+										<div class="price__size-text">
+											<p>Ширина</p>
+											<strong>до 500 см</strong>
+										</div>
+										<div class="price__size-text">
+											<p>Плотность:</p>
+											<strong>180 мк</strong>
+										</div>
+									</div>
+									<div class="price__type">
+										<span>матовый</span>
+										<span>сатиновый</span>
+										<span>глянцевый</span>
+									</div>
+								</div>
+							</div>
+							<div class="price__slide swiper-slide swiper-slide-next">
+								<div class="price__item">
+									<div class="price__top">
+										<h3 class="price__name">MSD Classic</h3>
+										<div class="price__firm">
+											<img src="img/price/msd.png" alt="#" />
+										</div>
+									</div>
+									<div class="price__number-body">
+										<div class="price__number">от 299 руб/<sup>2</sup></div>
+										<div class="price__number-icon">
+											<img src="img/price/best-price.svg" alt="#" />
+										</div>
+									</div>
+									<div class="price__colors-body">
+										<div class="price__colors-item">
+											<div class="price__color">белый</div>
+											<div class="price__color">цветной</div>
+										</div>
+										<img class="price__flag" src="img/price/china.svg" alt="#" />
+									</div>
+									<div class="price__size">
+										<div class="price__size-text">
+											<p>Ширина</p>
+											<strong>до 500 см</strong>
+										</div>
+										<div class="price__size-text">
+											<p>Плотность:</p>
+											<strong>180 мк</strong>
+										</div>
+									</div>
+									<div class="price__type">
+										<span>матовый</span>
+										<span>сатиновый</span>
+										<span>глянцевый</span>
+									</div>
+								</div>
+							</div>
+							<div class="price__slide swiper-slide">
+								<div class="price__item">
+									<div class="price__top">
+										<h3 class="price__name">MSD Classic</h3>
+										<div class="price__firm">
+											<img src="img/price/msd.png" alt="#" />
+										</div>
+									</div>
+									<div class="price__number-body">
+										<div class="price__number">от 299 руб/<sup>2</sup></div>
+										<div class="price__number-icon">
+											<img src="img/price/best-price.svg" alt="#" />
+										</div>
+									</div>
+									<div class="price__colors-body">
+										<div class="price__colors-item">
+											<div class="price__color">белый</div>
+											<div class="price__color">цветной</div>
+										</div>
+										<img class="price__flag" src="img/price/china.svg" alt="#" />
+									</div>
+									<div class="price__size">
+										<div class="price__size-text">
+											<p>Ширина</p>
+											<strong>до 500 см</strong>
+										</div>
+										<div class="price__size-text">
+											<p>Плотность:</p>
+											<strong>180 мк</strong>
+										</div>
+									</div>
+									<div class="price__type">
+										<span>матовый</span>
+										<span>сатиновый</span>
+										<span>глянцевый</span>
+									</div>
+								</div>
+							</div>
+							<div class="price__slide swiper-slide">
+								<div class="price__item">
+									<div class="price__top">
+										<h3 class="price__name">MSD Classic</h3>
+										<div class="price__firm">
+											<img src="img/price/msd.png" alt="#" />
+										</div>
+									</div>
+									<div class="price__number-body">
+										<div class="price__number">от 299 руб/<sup>2</sup></div>
+										<div class="price__number-icon">
+											<img src="img/price/best-price.svg" alt="#" />
+										</div>
+									</div>
+									<div class="price__colors-body">
+										<div class="price__colors-item">
+											<div class="price__color">белый</div>
+											<div class="price__color">цветной</div>
+										</div>
+										<img class="price__flag" src="img/price/china.svg" alt="#" />
+									</div>
+									<div class="price__size">
+										<div class="price__size-text">
+											<p>Ширина</p>
+											<strong>до 500 см</strong>
+										</div>
+										<div class="price__size-text">
+											<p>Плотность:</p>
+											<strong>180 мк</strong>
+										</div>
+									</div>
+									<div class="price__type">
+										<span>матовый</span>
+										<span>сатиновый</span>
+										<span>глянцевый</span>
+									</div>
+								</div>
+							</div>
+							<div class="price__slide swiper-slide">
+								<div class="price__item">
+									<div class="price__top">
+										<h3 class="price__name">MSD Classic</h3>
+										<div class="price__firm">
+											<img src="img/price/msd.png" alt="#" />
+										</div>
+									</div>
+									<div class="price__number-body">
+										<div class="price__number">от 299 руб/<sup>2</sup></div>
+										<div class="price__number-icon">
+											<img src="img/price/best-price.svg" alt="#" />
+										</div>
+									</div>
+									<div class="price__colors-body">
+										<div class="price__colors-item">
+											<div class="price__color">белый</div>
+											<div class="price__color">цветной</div>
+										</div>
+										<img class="price__flag" src="img/price/china.svg" alt="#" />
+									</div>
+									<div class="price__size">
+										<div class="price__size-text">
+											<p>Ширина</p>
+											<strong>до 500 см</strong>
+										</div>
+										<div class="price__size-text">
+											<p>Плотность:</p>
+											<strong>180 мк</strong>
+										</div>
+									</div>
+									<div class="price__type">
+										<span>матовый</span>
+										<span>сатиновый</span>
+										<span>глянцевый</span>
+									</div>
+								</div>
+							</div>
+							<div class="price__slide swiper-slide">
+								<div class="price__item">
+									<div class="price__top">
+										<h3 class="price__name">MSD Classic</h3>
+										<div class="price__firm">
+											<img src="img/price/msd.png" alt="#" />
+										</div>
+									</div>
+									<div class="price__number-body">
+										<div class="price__number">от 299 руб/<sup>2</sup></div>
+										<div class="price__number-icon">
+											<img src="img/price/best-price.svg" alt="#" />
+										</div>
+									</div>
+									<div class="price__colors-body">
+										<div class="price__colors-item">
+											<div class="price__color">белый</div>
+											<div class="price__color">цветной</div>
+										</div>
+										<img class="price__flag" src="img/price/china.svg" alt="#" />
+									</div>
+									<div class="price__size">
+										<div class="price__size-text">
+											<p>Ширина</p>
+											<strong>до 500 см</strong>
+										</div>
+										<div class="price__size-text">
+											<p>Плотность:</p>
+											<strong>180 мк</strong>
+										</div>
+									</div>
+									<div class="price__type">
+										<span>матовый</span>
+										<span>сатиновый</span>
+										<span>глянцевый</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+							<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="examples">
+				<div class="examples__container">
+					<div class="examples__top">
+						<h2 class="examples__title title">
+							Примеры расчетов натяжных потолков
+						</h2>
+						<a class="examples__link" href="#">Больше примеров</a>
+					</div>
+					<!-- Оболонка слайдера -->
+					<div class="examples-phone__slider swiper">
+						<!-- Частина слайдера, що рухається -->
+						<div class="examples-phone__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="examples-phone__slide swiper-slide">
+								<div class="examples__body">
+									<div class="examples__swiper-container">
+										<!-- 2) Главный слайдер -->
+										<div class="examples__slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+											<div data-gallery="" class="examples__wrapper swiper-wrapper" style="
+                            transition-duration: 0ms;
+                            transform: translate3d(-884px, 0px, 0px);
+                          ">
+												<a href="img/exemples/bg/01.jpg" class="examples__slide swiper-slide" data-lg-id="74c32ef0-0373-43bb-912a-879c61e3b2e6" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/01.jpg" />
+												</a>
+												<a href="img/exemples/bg/02.jpg" class="examples__slide swiper-slide swiper-slide-prev" data-lg-id="51fc5912-d4ec-4b09-9eff-b399c42f2a23" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/02.jpg" />
+												</a>
+												<a href="img/exemples/bg/01.jpg" class="examples__slide swiper-slide swiper-slide-active" data-lg-id="d85fed2f-953d-481e-bc50-439df1619608" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/01.jpg" />
+												</a>
+												<a href="img/exemples/bg/01.jpg" class="examples__slide swiper-slide swiper-slide-next" data-lg-id="01903adf-397c-4e6a-98d4-f608e5bc76f4" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/01.jpg" />
+												</a>
+											</div>
+											<div class="examples__navigacions">
+												<button type="button" class="examples-button-prev icon-arrow-left"></button>
+												<button type="button" class="examples-button-next icon-arrow-right"></button>
+											</div>
+										</div>
+										<!-- 1) Preview (thumbnails) -->
+										<div id="slider-thumb" class="examples__slider-thumb swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
+											<div data-gallery="" class="examples__wrapper-thumb swiper-wrapper" style="
+                            transform: translate3d(-442px, 0px, 0px);
+                            transition-duration: 0ms;
+                          ">
+												<a href="img/exemples/thumb/01.jpg" class="examples__slide-thumb swiper-slide" data-lg-id="488e1407-a0ae-4f64-a8af-dd3cb4614dab" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/01.jpg" />
+												</a>
+												<a href="img/exemples/thumb/02.jpg" class="examples__slide-thumb swiper-slide swiper-slide-prev" data-lg-id="33479af6-8c89-41d9-961d-10eb9b29f1a0" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/02.jpg" />
+												</a>
+												<a href="img/exemples/thumb/01.jpg" class="examples__slide-thumb swiper-slide swiper-slide-thumb-active swiper-slide-visible swiper-slide-active" data-lg-id="fb4f2a1a-dc42-4b64-9219-58dc8dbf6c09" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/01.jpg" />
+												</a>
+												<a href="img/exemples/thumb/01.jpg" class="examples__slide-thumb swiper-slide swiper-slide-visible swiper-slide-next" data-lg-id="5cfcebcd-1245-4964-9042-c6828f08a3fa" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/01.jpg" />
+												</a>
+											</div>
+											<div class="examples__slider-thumb-number" style="display: none">
+												+2
+											</div>
+										</div>
+									</div>
+
+									<div class="examples__content content-examples">
+										<h3 class="content-examples__title">
+											Цены на потолки в спальню 15 м2
+										</h3>
+										<div class="content-examples__price">
+											<div class="content-examples__number">
+												<span>14 800 руб</span>
+												<p>Стоимость с установкой</p>
+											</div>
+											<div class="content-examples__date">
+												<time datetime="2025-04-19">19.04.2025</time>
+												<p>Бригадир: Евгений</p>
+											</div>
+										</div>
+										<div class="content-examples__address">ул. Каховка</div>
+										<div data-showmore="" class="content-examples__showmore showmore-content-examples">
+											<ul data-showmore-content="200" class="showmore-content-examples__content content-examples__list" style="overflow: hidden; height: 200px">
+												<li class="content-examples__item">
+													<strong>Матовое полотно MSD Premium без шва</strong>
+													<strong>15 м²</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Стеновой профиль алюминиевый по периметру</strong>
+													<strong>19 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж маскировочной ленты</strong>
+													<strong>19 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж светильников</strong>
+													<strong>8 шт</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж электропроводки</strong>
+													<strong>15 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж ниши для штор (+6900 руб)</strong>
+													<strong>3 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж ниши для штор +15400 руб</strong>
+													<strong>7 м</strong>
+												</li>
+											</ul>
+											<button data-showmore-button="" type="button" class="showmore-content-examples__more">
+												<span>Показать полный список</span><span>Скрыть</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="examples-phone__slide swiper-slide">
+								<div class="examples__body">
+									<div class="examples__swiper-container">
+										<!-- 2) Главный слайдер -->
+										<div class="examples__slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+											<div data-gallery="" class="examples__wrapper swiper-wrapper">
+												<a href="img/exemples/bg/01.jpg" class="examples__slide swiper-slide swiper-slide-active" data-lg-id="aa78be9f-0c6f-48e6-bea2-aaace48fba9c" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/01.jpg" />
+												</a>
+												<a href="img/exemples/bg/02.jpg" class="examples__slide swiper-slide swiper-slide-next" data-lg-id="e37bd2c9-126a-43f9-b216-229363e80855" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/02.jpg" />
+												</a>
+												<a href="img/exemples/bg/01.jpg" class="examples__slide swiper-slide" data-lg-id="f9aec073-2ae2-4ad2-ab39-6d676c8c68a3" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/01.jpg" />
+												</a>
+												<a href="img/exemples/bg/01.jpg" class="examples__slide swiper-slide" data-lg-id="226eb9ee-f7ef-4e5b-83f5-4d8fe7f9907c" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/01.jpg" />
+												</a>
+											</div>
+											<div class="examples__navigacions">
+												<button type="button" class="examples-button-prev icon-arrow-left swiper-button-disabled" disabled=""></button>
+												<button type="button" class="examples-button-next icon-arrow-right"></button>
+											</div>
+										</div>
+										<!-- 1) Preview (thumbnails) -->
+										<div id="slider-thumb" class="examples__slider-thumb swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
+											<div data-gallery="" class="examples__wrapper-thumb swiper-wrapper" style="transform: translate3d(0px, 0px, 0px)">
+												<a href="img/exemples/thumb/01.jpg" class="examples__slide-thumb swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" data-lg-id="c666c9f2-87b2-4796-bb01-52daf964d4d7" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/01.jpg" />
+												</a>
+												<a href="img/exemples/thumb/02.jpg" class="examples__slide-thumb swiper-slide swiper-slide-visible swiper-slide-next" data-lg-id="87990b2a-9d7e-4712-9446-928df26f27ae" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/02.jpg" />
+												</a>
+												<a href="img/exemples/thumb/01.jpg" class="examples__slide-thumb swiper-slide" data-lg-id="00ac9ae9-b9bd-4378-9d92-71d7384eaa99" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/01.jpg" />
+												</a>
+												<a href="img/exemples/thumb/01.jpg" class="examples__slide-thumb swiper-slide" data-lg-id="cec736aa-94f2-4cdf-9061-70e736f53156" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/01.jpg" />
+												</a>
+											</div>
+											<div class="examples__slider-thumb-number" style="display: flex">
+												+2
+											</div>
+										</div>
+									</div>
+
+									<div class="examples__content content-examples">
+										<h3 class="content-examples__title">
+											Цены на потолки в спальню 15 м2
+										</h3>
+										<div class="content-examples__price">
+											<div class="content-examples__number">
+												<span>14 800 руб</span>
+												<p>Стоимость с установкой</p>
+											</div>
+											<div class="content-examples__date">
+												<time datetime="2025-04-19">19.04.2025</time>
+												<p>Бригадир: Евгений</p>
+											</div>
+										</div>
+										<div class="content-examples__address">ул. Каховка</div>
+										<div data-showmore="" class="content-examples__showmore showmore-content-examples">
+											<ul data-showmore-content="200" class="showmore-content-examples__content content-examples__list" style="overflow: hidden; height: 200px">
+												<li class="content-examples__item">
+													<strong>Матовое полотно MSD Premium без шва</strong>
+													<strong>15 м²</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Стеновой профиль алюминиевый по периметру</strong>
+													<strong>19 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж маскировочной ленты</strong>
+													<strong>19 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж светильников</strong>
+													<strong>8 шт</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж электропроводки</strong>
+													<strong>15 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж ниши для штор (+6900 руб)</strong>
+													<strong>3 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж ниши для штор +15400 руб</strong>
+													<strong>7 м</strong>
+												</li>
+											</ul>
+											<button data-showmore-button="" type="button" class="showmore-content-examples__more">
+												<span>Показать полный список</span><span>Скрыть</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="examples-phone__slide swiper-slide">
+								<div class="examples__body">
+									<div class="examples__swiper-container">
+										<!-- 2) Главный слайдер -->
+										<div class="examples__slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+											<div data-gallery="" class="examples__wrapper swiper-wrapper">
+												<a href="img/exemples/bg/01.jpg" class="examples__slide swiper-slide swiper-slide-active" data-lg-id="6aa282fe-b346-4cc3-bcf9-edfbf71cba26" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/01.jpg" />
+												</a>
+												<a href="img/exemples/bg/02.jpg" class="examples__slide swiper-slide swiper-slide-next" data-lg-id="72847a10-072b-47b6-92fb-51e3e3523882" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/02.jpg" />
+												</a>
+												<a href="img/exemples/bg/01.jpg" class="examples__slide swiper-slide" data-lg-id="eb2ca986-74a1-44d6-89a6-5103fdd4c3eb" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/01.jpg" />
+												</a>
+												<a href="img/exemples/bg/01.jpg" class="examples__slide swiper-slide" data-lg-id="54abf653-983d-46c1-96fa-4c403b285d8d" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/01.jpg" />
+												</a>
+											</div>
+											<div class="examples__navigacions">
+												<button type="button" class="examples-button-prev icon-arrow-left swiper-button-disabled" disabled=""></button>
+												<button type="button" class="examples-button-next icon-arrow-right"></button>
+											</div>
+										</div>
+										<!-- 1) Preview (thumbnails) -->
+										<div id="slider-thumb" class="examples__slider-thumb swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
+											<div data-gallery="" class="examples__wrapper-thumb swiper-wrapper" style="transform: translate3d(0px, 0px, 0px)">
+												<a href="img/exemples/thumb/01.jpg" class="examples__slide-thumb swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" data-lg-id="8941851b-dc9a-4222-afe0-8279d198a280" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/01.jpg" />
+												</a>
+												<a href="img/exemples/thumb/02.jpg" class="examples__slide-thumb swiper-slide swiper-slide-visible swiper-slide-next" data-lg-id="0249ef0a-1400-4090-9d5e-f3bf848eb45a" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/02.jpg" />
+												</a>
+												<a href="img/exemples/thumb/01.jpg" class="examples__slide-thumb swiper-slide" data-lg-id="46416397-8f46-4a9e-9251-28fdf85f7635" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/01.jpg" />
+												</a>
+												<a href="img/exemples/thumb/01.jpg" class="examples__slide-thumb swiper-slide" data-lg-id="5700c64a-64e3-44ab-b23e-fc6d49b02417" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/01.jpg" />
+												</a>
+											</div>
+											<div class="examples__slider-thumb-number" style="display: flex">
+												+2
+											</div>
+										</div>
+									</div>
+
+									<div class="examples__content content-examples">
+										<h3 class="content-examples__title">
+											Цены на потолки в спальню 15 м2
+										</h3>
+										<div class="content-examples__price">
+											<div class="content-examples__number">
+												<span>14 800 руб</span>
+												<p>Стоимость с установкой</p>
+											</div>
+											<div class="content-examples__date">
+												<time datetime="2025-04-19">19.04.2025</time>
+												<p>Бригадир: Евгений</p>
+											</div>
+										</div>
+										<div class="content-examples__address">ул. Каховка</div>
+										<div data-showmore="" class="content-examples__showmore showmore-content-examples">
+											<ul data-showmore-content="200" class="showmore-content-examples__content content-examples__list" style="overflow: hidden; height: 200px">
+												<li class="content-examples__item">
+													<strong>Матовое полотно MSD Premium без шва</strong>
+													<strong>15 м²</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Стеновой профиль алюминиевый по периметру</strong>
+													<strong>19 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж маскировочной ленты</strong>
+													<strong>19 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж светильников</strong>
+													<strong>8 шт</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж электропроводки</strong>
+													<strong>15 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж ниши для штор (+6900 руб)</strong>
+													<strong>3 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж ниши для штор +15400 руб</strong>
+													<strong>7 м</strong>
+												</li>
+											</ul>
+											<button data-showmore-button="" type="button" class="showmore-content-examples__more">
+												<span>Показать полный список</span><span>Скрыть</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="examples-phone__slide swiper-slide">
+								<div class="examples__body">
+									<div class="examples__swiper-container">
+										<!-- 2) Главный слайдер -->
+										<div class="examples__slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+											<div data-gallery="" class="examples__wrapper swiper-wrapper">
+												<a href="img/exemples/bg/03.jpg" class="examples__slide swiper-slide swiper-slide-active" data-lg-id="a07058db-3dba-4bfb-b343-40e5792b104b" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/03.jpg" />
+												</a>
+												<a href="img/exemples/bg/04.jpg" class="examples__slide swiper-slide swiper-slide-next" data-lg-id="98c29239-9c81-4016-ad84-0f923a122fa5" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/04.jpg" />
+												</a>
+												<a href="img/exemples/bg/05.jpg" class="examples__slide swiper-slide" data-lg-id="5268ec48-b36b-4eea-9d19-f5f35b28eb7f" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/05.jpg" />
+												</a>
+												<a href="img/exemples/bg/06.jpg" class="examples__slide swiper-slide" data-lg-id="abdaff29-a60d-4e49-89a4-e8d773006deb" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/06.jpg" />
+												</a>
+												<a href="img/exemples/bg/03.jpg" class="examples__slide swiper-slide" data-lg-id="e4926a4f-9aea-4c65-b12c-301ccd791fc1" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/03.jpg" />
+												</a>
+												<a href="img/exemples/bg/04.jpg" class="examples__slide swiper-slide" data-lg-id="aa953b09-b428-4876-9e87-e4cd59e948c5" style="width: 432px; margin-right: 10px">
+													<img src="img/exemples/bg/04.jpg" />
+												</a>
+											</div>
+											<div class="examples__navigacions">
+												<button type="button" class="examples-button-prev icon-arrow-left swiper-button-disabled" disabled=""></button>
+												<button type="button" class="examples-button-next icon-arrow-right"></button>
+											</div>
+										</div>
+										<!-- 1) Preview (thumbnails) -->
+										<div id="slider-thumb" class="examples__slider-thumb swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
+											<div data-gallery="" class="examples__wrapper-thumb swiper-wrapper" style="transform: translate3d(0px, 0px, 0px)">
+												<a href="img/exemples/thumb/03.jpg" class="examples__slide-thumb swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" data-lg-id="b6f963b7-1df2-46b5-9639-455c05e30cb0" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/03.jpg" />
+												</a>
+												<a href="img/exemples/thumb/04.jpg" class="examples__slide-thumb swiper-slide swiper-slide-visible swiper-slide-next" data-lg-id="0752821f-edcd-43d9-bdc5-8f056e494ed9" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/04.jpg" />
+												</a>
+												<a href="img/exemples/thumb/05.jpg" class="examples__slide-thumb swiper-slide" data-lg-id="041be11a-8851-4156-ab90-65cd00e72fd4" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/05.jpg" />
+												</a>
+												<a href="img/exemples/thumb/06.jpg" class="examples__slide-thumb swiper-slide" data-lg-id="94f2da0f-84af-4299-b117-651f5d664fae" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/06.jpg" />
+												</a>
+												<a href="img/exemples/thumb/03.jpg" class="examples__slide-thumb swiper-slide" data-lg-id="8720a9e9-0b85-4499-b2d1-fdaa5c5e4786" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/03.jpg" />
+												</a>
+												<a href="img/exemples/thumb/04.jpg" class="examples__slide-thumb swiper-slide" data-lg-id="700df7dd-5dc2-4017-a4ad-171e16dce700" style="width: 211px; margin-right: 10px">
+													<img src="img/exemples/thumb/04.jpg" />
+												</a>
+											</div>
+											<div class="examples__slider-thumb-number" style="display: flex">
+												+4
+											</div>
+										</div>
+									</div>
+
+									<div class="examples__content content-examples">
+										<h3 class="content-examples__title">
+											Цены на потолки в спальню 15 м2
+										</h3>
+										<div class="content-examples__price">
+											<div class="content-examples__number">
+												<span>14 800 руб</span>
+												<p>Стоимость с установкой</p>
+											</div>
+											<div class="content-examples__date">
+												<time datetime="2025-04-19">19.04.2025</time>
+												<p>Бригадир: Евгений</p>
+											</div>
+										</div>
+										<div class="content-examples__address">ул. Каховка</div>
+										<div data-showmore="" class="content-examples__showmore showmore-content-examples">
+											<ul data-showmore-content="200" class="showmore-content-examples__content content-examples__list" style="overflow: hidden; height: 200px">
+												<li class="content-examples__item">
+													<strong>Матовое полотно MSD Premium без шва</strong>
+													<strong>15 м²</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Стеновой профиль алюминиевый по периметру</strong>
+													<strong>19 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж маскировочной ленты</strong>
+													<strong>19 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж светильников</strong>
+													<strong>8 шт</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж электропроводки</strong>
+													<strong>15 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж ниши для штор (+6900 руб)</strong>
+													<strong>3 м</strong>
+												</li>
+												<li class="content-examples__item">
+													<strong>Монтаж ниши для штор +15400 руб</strong>
+													<strong>7 м</strong>
+												</li>
+											</ul>
+											<button data-showmore-button="" type="button" class="showmore-content-examples__more">
+												<span>Показать полный список</span><span>Скрыть</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Якщо потрібна пагінація -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<section class="map">
+				<div class="map__container">
+					<h2 class="map__title title">NOVA рядом с Вами на карте Москвы</h2>
+					<div class="map__body">
+						<div class="map__image">
+							<img src="img/map/office.jpg" alt="#" />
+						</div>
+						<div class="map__map">
+							<iframe src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=false&amp;source=constructor-api&amp;um=constructor%3Ab954b9eb59e95230cbd0a44d3a7e3f9dc072aa8799804a92537534b7acec8625" frameborder="0" allowfullscreen="true" width="100%" height="100%" style="display: block"></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="nav">
+				<a href="#"><i class="icon-arrow-right"></i></a>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top top-footer">
+					<div class="top-footer__column">
+						<a class="top-footer__logo" href="#">
+							<img src="img/footer/logo.svg" alt="#" />
+						</a>
+						<p class="top-footer__text">
+							Производство и установка натяжных потолков в Москве и Московской
+							области.
+						</p>
+						<a data-popup="#popup-two" class="top-footer__button button button--yellow" href="#">Вызвать замерщика</a>
+					</div>
+					<div data-dynamic-list="company" data-list-breakpoint="480,max" data-spollers="480,max" class="bottom-footer__menu">
+						<div class="bottom-footer__item">
+							<h3 data-list-trigger data-spoller class="bottom-footer__title">
+								О компании
+							</h3>
+							<ul data-list-content data-visible-items="5" class="bottom-footer__list">
+								<li><a href="#">Цены на потолки</a></li>
+								<li><a href="#">Калькулятор</a></li>
+								<li><a href="#">Фото работ</a></li>
+								<li><a href="#">Акции и скидки на потолки</a></li>
+								<li><a href="#">Отзывы о фирме Nova - натяжные потолки</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<button data-list-button hidden type="button" class="bottom-footer__more">
+							<span>Еще</span><span>Скрыть</span>
+						</button>
+					</div>
+					<div data-dynamic-list="menu" data-list-breakpoint="480,max" data-spollers="480,max" class="bottom-footer__menu">
+						<div class="bottom-footer__item">
+							<h3 data-list-trigger data-spoller class="bottom-footer__title">
+								Услуги
+							</h3>
+							<ul data-list-content data-visible-items="5" class="bottom-footer__list">
+								<li><a href="">Слив воды с потолка</a></li>
+								<li><a href="">Демонтаж полотен / потолков</a></li>
+								<li><a href="">Перетяжка натяжного потолка</a></li>
+								<li><a href="">Ремонт ПВХ потолка</a></li>
+								<li><a href="">Установка точечных светильников</a></li>
+								<li><a href="">Замена натяжного потолка</a></li>
+								<li><a href="">Натяжные стены</a></li>
+							</ul>
+						</div>
+						<button data-list-button hidden type="button" class="bottom-footer__more">
+							<span>Еще</span><span>Скрыть</span>
+						</button>
+					</div>
+					<div data-dynamic-list="menu" data-list-breakpoint="480,max" data-spollers="480,max" class="bottom-footer__menu">
+						<div class="bottom-footer__item">
+							<h3 data-list-trigger data-spoller class="bottom-footer__title">
+								Информация
+							</h3>
+							<ul data-list-content data-visible-items="5" class="bottom-footer__list">
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Рассрочка на потолки</a></li>
+								<li><a href="#">Блог</a></li>
+								<li><a href="#">Публичная оферта</a></li>
+							</ul>
+						</div>
+						<button data-list-button hidden type="button" class="bottom-footer__more">
+							<span>Еще</span><span>Скрыть</span>
+						</button>
+					</div>
+					<div data-dynamic-list="menu" data-list-breakpoint="480,max" data-spollers="480,max" class="bottom-footer__menu">
+						<div class="bottom-footer__item">
+							<h3 data-list-trigger data-spoller class="bottom-footer__title">
+								Контакты
+							</h3>
+							<ul data-list-content data-visible-items="5" class="bottom-footer__list">
+								<li class="top-footer__item">
+									<h4 class="top-footer__contact-title">Звоните</h4>
+									<a class="top-footer__contact-link" href="tel:8 (499) 398-01-57">8 (499) 398-01-57</a>
+								</li>
+								<li class="top-footer__item">
+									<h4 class="top-footer__contact-title">Пишите</h4>
+									<a class="top-footer__contact-link" href="malito:info@potolki-nova.ru">info@potolki-nova.ru</a>
+								</li>
+								<li class="top-footer__item">
+									<h4 class="top-footer__contact-title">Адресa</h4>
+									<p class="top-footer__contact-text">Химки, 9 мая, 12Д</p>
+								</li>
+								<li class="top-footer__item">
+									<h4 class="top-footer__contact-title">Москва</h4>
+									<p class="top-footer__contact-text">Пресненская наб., 12</p>
+								</li>
+								<li class="top-footer__item">
+									<h4 class="top-footer__contact-title">Москва</h4>
+									<p class="top-footer__contact-text">
+										Киевское шоссе,22-й километр, 4, стр. 1, корп. А
+									</p>
+								</li>
+								<li class="top-footer__item">
+									<h4 class="top-footer__contact-title">Режим работы</h4>
+									<p class="top-footer__contact-text">пн-вс: c 9:00 до 21:00</p>
+								</li>
+								<li class="top-footer__item">
+									<h4 class="top-footer__contact-title">Мы на связи</h4>
+									<div class="top-footer__contact-socials">
+										<a href="#"><img src="img/footer/wp-black.svg" alt="#" /></a>
+										<a href="#"><img src="img/footer/tg-black.svg" alt="#" /></a>
+										<a href="#"><img src="img/footer/tgbot-black.svg" alt="#" /></a>
+										<a href="#"><img src="img/footer/vk-black.svg" alt="#" /></a>
+										<a href="#"><img src="img/footer/vk-black.svg" alt="#" /></a>
+										<a href="#"><img src="img/footer/pinterest-black.svg" alt="#" /></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<button data-list-button hidden type="button" class="bottom-footer__more">
+							<span>Еще</span><span>Скрыть</span>
+						</button>
+					</div>
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<div data-dynamic-list="menu" data-list-breakpoint="480,max" data-spollers="480,max" class="bottom-footer__menu">
+						<div class="bottom-footer__item">
+							<h3 data-list-trigger data-spoller class="bottom-footer__title">
+								Помещение
+							</h3>
+							<ul data-list-content data-visible-items="5" class="bottom-footer__list">
+								<li><a href="">На кухню</a></li>
+								<li><a href="">В ванную</a></li>
+								<li><a href="">В гостиную</a></li>
+								<li><a href="">В детскую</a></li>
+								<li><a href="">В спальню</a></li>
+								<li><a href="">В прихожую</a></li>
+								<li><a href="">В частный дом</a></li>
+								<li><a href="">На мансарду</a></li>
+								<li><a href="">На балкон</a></li>
+								<li><a href="">В зал</a></li>
+								<li><a href="">В коридор</a></li>
+								<li><a href="">На дачу</a></li>
+								<li><a href="">В офис</a></li>
+								<li><a href="">В бассейн</a></li>
+								<li><a href="">В новостройку</a></li>
+								<li>
+									<a href="">В студию</a>
+								</li>
+								<li>
+									<a href="">В двухкомнатную квартиру</a>
+								</li>
+								<li>
+									<a href="">В деревянный дом</a>
+								</li>
+								<li>
+									<a href="">В однокомнатную квартиру</a>
+								</li>
+								<li>
+									<a href="">В трехкомнатную квартиру</a>
+								</li>
+								<li>
+									<a href="">В доме с балками</a>
+								</li>
+							</ul>
+						</div>
+						<button data-list-button hidden type="button" class="bottom-footer__more">
+							<span>Еще</span><span>Скрыть</span>
+						</button>
+					</div>
+					<div data-dynamic-list="menu" data-list-breakpoint="480,max" data-spollers="480,max" class="bottom-footer__menu">
+						<div class="bottom-footer__item">
+							<h3 data-list-trigger data-spoller class="bottom-footer__title">
+								Фактуры
+							</h3>
+							<ul data-list-content data-visible-items="5" class="bottom-footer__list">
+								<li><a href="">Матовые</a></li>
+								<li><a href="">Сатиновые</a></li>
+								<li><a href="">Тканевые</a></li>
+								<li><a href="">Глянцевые</a></li>
+								<li><a href="">Премиум-класса</a></li>
+								<li><a href="">Фактурные</a></li>
+								<li><a href="">Гипоаллергенные</a></li>
+								<li><a href="">Cold Stretch</a></li>
+								<li><a href="">Негорючие</a></li>
+								<li><a href="">Натяжные потолки под ключ</a></li>
+							</ul>
+						</div>
+						<button data-list-button hidden type="button" class="bottom-footer__more">
+							<span>Еще</span><span>Скрыть</span>
+						</button>
+					</div>
+					<div data-dynamic-list="menu" data-list-breakpoint="480,max" data-spollers="480,max" class="bottom-footer__menu">
+						<div class="bottom-footer__item">
+							<h3 data-list-trigger data-spoller class="bottom-footer__title">
+								Технологии
+							</h3>
+							<ul data-list-content data-visible-items="5" class="bottom-footer__list">
+								<li><a href="">Двухуровневые</a></li>
+								<li><a href="">С подсветкой</a></li>
+								<li><a href="">Бесшовные</a></li>
+								<li><a href="">Потолки "Звездное небо"</a></li>
+								<li><a href="">Криволинейные</a></li>
+								<li><a href="">Парящие</a></li>
+								<li><a href="">Демпферные</a></li>
+								<li><a href="">3Д-потолки</a></li>
+								<li><a href="">Одноуровневые</a></li>
+								<li><a href="">Теневые</a></li>
+								<li><a href="">С контурной подсветкой</a></li>
+								<li><a href="">С фотопечатью</a></li>
+								<li><a href="">Со световыми линиями</a></li>
+								<li><a href="">Со встроенным карнизом</a></li>
+								<li><a href="">С трековой системой</a></li>
+								<li><a href="">С точечными светильниками</a></li>
+								<li><a href="">Со звукоизоляцией</a></li>
+								<li><a href="">Небо с облаками</a></li>
+								<li><a href="">Double Vision</a></li>
+								<li><a href="">Перфорированные (резные Apply)</a></li>
+								<li><a href="">Световое окно</a></li>
+								<li><a href="">С ревизионными люками</a></li>
+								<li><a href="">Электрокарнизы</a></li>
+								<li><a href="">Люк под потолок</a></li>
+								<li><a href="">Натяжные стены</a></li>
+								<li><a href="">Двухуровневый с подсветкой</a></li>
+							</ul>
+						</div>
+						<button data-list-button hidden type="button" class="bottom-footer__more">
+							<span>Еще</span><span>Скрыть</span>
+						</button>
+					</div>
+					<div data-dynamic-list="menu" data-list-breakpoint="480,max" data-spollers="480,max" class="bottom-footer__menu">
+						<div class="bottom-footer__item">
+							<h3 data-list-trigger data-spoller class="bottom-footer__title">
+								Производители
+							</h3>
+							<ul data-list-content data-visible-items="5" class="bottom-footer__list">
+								<li><a href="">Bauf</a></li>
+								<li><a href="">LUMFER</a></li>
+								<li><a href="">Полотна MSD</a></li>
+								<li><a href="">Descor</a></li>
+								<li><a href="">Clipso</a></li>
+								<li><a href="">TEQTUM</a></li>
+								<li><a href="">Немецкие</a></li>
+							</ul>
+						</div>
+						<button data-list-button hidden type="button" class="bottom-footer__more">
+							<span>Еще</span><span>Скрыть</span>
+						</button>
+					</div>
+					<div data-dynamic-list="menu" data-list-breakpoint="480,max" data-spollers="480,max" class="bottom-footer__menu">
+						<div class="bottom-footer__item">
+							<h3 data-list-trigger data-spoller class="bottom-footer__title">
+								По цветам
+							</h3>
+							<ul data-list-content data-visible-items="5" class="bottom-footer__list">
+								<li><a href="">Бежевые</a></li>
+								<li><a href="">Белые натяжные потолки</a></li>
+								<li><a href="">Черные</a></li>
+								<li><a href="">Цветные</a></li>
+								<li><a href="">Красные</a></li>
+								<li><a href="">Под дерево</a></li>
+								<li><a href="">Под бетон</a></li>
+								<li><a href="">Голубые</a></li>
+								<li><a href="">Двухцветные</a></li>
+								<li><a href="">Коричневые</a></li>
+								<li><a href="">Серые</a></li>
+								<li><a href="">В классическом стиле</a></li>
+								<li><a href="">В скандинавском стиле</a></li>
+								<li><a href="">Лофт</a></li>
+								<li><a href="">Зеркальные</a></li>
+							</ul>
+						</div>
+						<button data-list-button hidden type="button" class="bottom-footer__more">
+							<span>Еще</span><span>Скрыть</span>
+						</button>
+					</div>
+					<div class="bottom-footer__column">
+						<a class="bottom-footer__column-yandex" href="#">
+							<img src="img/footer/banyandex.svg" alt="#" />
+						</a>
+						<a data-popup="#popup-seven" download="Отзыв_клиента.pdf" class="bottom-footer__column-button button button--white" href="#">Оставить отзыв</a>
+					</div>
+				</div>
+				<div class="footer__buy buy-footer">
+					<div class="buy-footer__rec">
+						<p class="buy-footer__text">
+							<strong>Реквизиты:</strong> ИП Колган Александр Алексеевич | РФ,
+							141400, МО, Химки, Пр-кт Ленинский, дом 20, кв. 152 ИНН 462004737091 |
+							ОГРН 321508100402256 Расчетный счет: 40802810300002553274 | АО
+							«Тинькофф Банк»
+						</p>
+						<a class="buy-footer__button" target="_blank" href="img/rekvizity.pdf">Скачать</a>
+					</div>
+					<div class="buy-footer__pay">
+						<img class="buy-footer__image" src="img/footer/visa.svg" alt="#" />
+						<img class="buy-footer__image" src="img/footer/mir.svg" alt="#" />
+						<img class="buy-footer__image" src="img/footer/mastercard.svg" alt="#" />
+					</div>
+				</div>
+				<div class="footer__info">
+					Вся информация и цены представленные на сайте не являются публичной
+					офертой. Стоимость каждого заказа рассчитывается индивидуально на замере.
+				</div>
+				<div class="footer__info">
+					<p>
+						Copyright © 2008-2025. Все права защищены. При использовании контента
+						или любой его части ссылка на наш сайт обязательна.
+					</p>
+					<a href="#">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="js/app.min.js?_v=20250813175216"></script>
+</body>
+
+</html>

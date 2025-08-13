@@ -4049,6 +4049,13 @@
                 document.documentElement.classList.add(className);
             }));
         }
+        function addLoadedClass() {
+            if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
+                setTimeout((function() {
+                    document.documentElement.classList.add("loaded");
+                }), 0);
+            }));
+        }
         function getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
@@ -5100,9 +5107,6 @@
                 swiper.cssModeFrameID = window.requestAnimationFrame(animate);
             };
             animate();
-        }
-        function utils_getSlideTransformEl(slideEl) {
-            return slideEl.querySelector(".swiper-slide-transform") || slideEl.shadowEl && slideEl.shadowEl.querySelector(".swiper-slide-transform") || slideEl;
         }
         function utils_elementChildren(element, selector = "") {
             return [ ...element.children ].filter((el => el.matches(selector)));
@@ -8499,138 +8503,6 @@
                 }
             });
         }
-        function effect_target_effectTarget(effectParams, slideEl) {
-            const transformEl = utils_getSlideTransformEl(slideEl);
-            if (transformEl !== slideEl) {
-                transformEl.style.backfaceVisibility = "hidden";
-                transformEl.style["-webkit-backface-visibility"] = "hidden";
-            }
-            return transformEl;
-        }
-        function create_shadow_createShadow(params, slideEl, side) {
-            const shadowClass = `swiper-slide-shadow${side ? `-${side}` : ""}`;
-            const shadowContainer = utils_getSlideTransformEl(slideEl);
-            let shadowEl = shadowContainer.querySelector(`.${shadowClass}`);
-            if (!shadowEl) {
-                shadowEl = utils_createElement("div", `swiper-slide-shadow${side ? `-${side}` : ""}`);
-                shadowContainer.append(shadowEl);
-            }
-            return shadowEl;
-        }
-        function effect_init_effectInit(params) {
-            const {effect, swiper, on, setTranslate, setTransition, overwriteParams, perspective, recreateShadows, getEffectParams} = params;
-            on("beforeInit", (() => {
-                if (swiper.params.effect !== effect) return;
-                swiper.classNames.push(`${swiper.params.containerModifierClass}${effect}`);
-                if (perspective && perspective()) swiper.classNames.push(`${swiper.params.containerModifierClass}3d`);
-                const overwriteParamsResult = overwriteParams ? overwriteParams() : {};
-                Object.assign(swiper.params, overwriteParamsResult);
-                Object.assign(swiper.originalParams, overwriteParamsResult);
-            }));
-            on("setTranslate", (() => {
-                if (swiper.params.effect !== effect) return;
-                setTranslate();
-            }));
-            on("setTransition", ((_s, duration) => {
-                if (swiper.params.effect !== effect) return;
-                setTransition(duration);
-            }));
-            on("transitionEnd", (() => {
-                if (swiper.params.effect !== effect) return;
-                if (recreateShadows) {
-                    if (!getEffectParams || !getEffectParams().slideShadows) return;
-                    swiper.slides.forEach((slideEl => {
-                        slideEl.querySelectorAll(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").forEach((shadowEl => shadowEl.remove()));
-                    }));
-                    recreateShadows();
-                }
-            }));
-            let requireUpdateOnVirtual;
-            on("virtualUpdate", (() => {
-                if (swiper.params.effect !== effect) return;
-                if (!swiper.slides.length) requireUpdateOnVirtual = true;
-                requestAnimationFrame((() => {
-                    if (requireUpdateOnVirtual && swiper.slides && swiper.slides.length) {
-                        setTranslate();
-                        requireUpdateOnVirtual = false;
-                    }
-                }));
-            }));
-        }
-        function EffectCoverflow({swiper, extendParams, on}) {
-            extendParams({
-                coverflowEffect: {
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    scale: 1,
-                    modifier: 1,
-                    slideShadows: true
-                }
-            });
-            const setTranslate = () => {
-                const {width: swiperWidth, height: swiperHeight, slides, slidesSizesGrid} = swiper;
-                const params = swiper.params.coverflowEffect;
-                const isHorizontal = swiper.isHorizontal();
-                const transform = swiper.translate;
-                const center = isHorizontal ? -transform + swiperWidth / 2 : -transform + swiperHeight / 2;
-                const rotate = isHorizontal ? params.rotate : -params.rotate;
-                const translate = params.depth;
-                for (let i = 0, length = slides.length; i < length; i += 1) {
-                    const slideEl = slides[i];
-                    const slideSize = slidesSizesGrid[i];
-                    const slideOffset = slideEl.swiperSlideOffset;
-                    const centerOffset = (center - slideOffset - slideSize / 2) / slideSize;
-                    const offsetMultiplier = "function" === typeof params.modifier ? params.modifier(centerOffset) : centerOffset * params.modifier;
-                    let rotateY = isHorizontal ? rotate * offsetMultiplier : 0;
-                    let rotateX = isHorizontal ? 0 : rotate * offsetMultiplier;
-                    let translateZ = -translate * Math.abs(offsetMultiplier);
-                    let stretch = params.stretch;
-                    if ("string" === typeof stretch && -1 !== stretch.indexOf("%")) stretch = parseFloat(params.stretch) / 100 * slideSize;
-                    let translateY = isHorizontal ? 0 : stretch * offsetMultiplier;
-                    let translateX = isHorizontal ? stretch * offsetMultiplier : 0;
-                    let scale = 1 - (1 - params.scale) * Math.abs(offsetMultiplier);
-                    if (Math.abs(translateX) < .001) translateX = 0;
-                    if (Math.abs(translateY) < .001) translateY = 0;
-                    if (Math.abs(translateZ) < .001) translateZ = 0;
-                    if (Math.abs(rotateY) < .001) rotateY = 0;
-                    if (Math.abs(rotateX) < .001) rotateX = 0;
-                    if (Math.abs(scale) < .001) scale = 0;
-                    const slideTransform = `translate3d(${translateX}px,${translateY}px,${translateZ}px)  rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
-                    const targetEl = effect_target_effectTarget(params, slideEl);
-                    targetEl.style.transform = slideTransform;
-                    slideEl.style.zIndex = -Math.abs(Math.round(offsetMultiplier)) + 1;
-                    if (params.slideShadows) {
-                        let shadowBeforeEl = isHorizontal ? slideEl.querySelector(".swiper-slide-shadow-left") : slideEl.querySelector(".swiper-slide-shadow-top");
-                        let shadowAfterEl = isHorizontal ? slideEl.querySelector(".swiper-slide-shadow-right") : slideEl.querySelector(".swiper-slide-shadow-bottom");
-                        if (!shadowBeforeEl) shadowBeforeEl = create_shadow_createShadow(params, slideEl, isHorizontal ? "left" : "top");
-                        if (!shadowAfterEl) shadowAfterEl = create_shadow_createShadow(params, slideEl, isHorizontal ? "right" : "bottom");
-                        if (shadowBeforeEl) shadowBeforeEl.style.opacity = offsetMultiplier > 0 ? offsetMultiplier : 0;
-                        if (shadowAfterEl) shadowAfterEl.style.opacity = -offsetMultiplier > 0 ? -offsetMultiplier : 0;
-                    }
-                }
-            };
-            const setTransition = duration => {
-                const transformElements = swiper.slides.map((slideEl => utils_getSlideTransformEl(slideEl)));
-                transformElements.forEach((el => {
-                    el.style.transitionDuration = `${duration}ms`;
-                    el.querySelectorAll(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").forEach((shadowEl => {
-                        shadowEl.style.transitionDuration = `${duration}ms`;
-                    }));
-                }));
-            };
-            effect_init_effectInit({
-                effect: "coverflow",
-                swiper,
-                on,
-                setTranslate,
-                setTransition,
-                perspective: () => true,
-                overwriteParams: () => ({
-                    watchSlidesProgress: true
-                })
-            });
-        }
         function initSliders() {
             if (document.querySelector(".foto__slider")) new core(".foto__slider", {
                 modules: [ Navigation, Pagination ],
@@ -8666,20 +8538,12 @@
                 on: {}
             });
             if (document.querySelector(".video__slider")) new core(".video__slider", {
-                modules: [ Navigation, EffectCoverflow, Pagination, Autoplay ],
+                modules: [ Navigation, Pagination, Autoplay ],
                 observer: true,
                 observeParents: true,
-                slidesPerView: 1.5,
+                slidesPerView: 1.7,
                 spaceBetween: 10,
                 speed: 800,
-                effect: "coverflow",
-                coverflowEffect: {
-                    rotate: 15,
-                    stretch: 0,
-                    depth: 200,
-                    modifier: 1.5,
-                    slideShadows: false
-                },
                 autoplay: {
                     delay: 4e3,
                     disableOnInteraction: false
@@ -8693,18 +8557,18 @@
                     nextEl: ".video-button-next"
                 },
                 breakpoints: {
-                    640: {
-                        slidesPerView: 2,
+                    500: {
+                        slidesPerView: 2.7,
                         spaceBetween: 20,
                         autoHeight: true
                     },
                     768: {
-                        slidesPerView: 2.5,
+                        slidesPerView: 3.5,
                         spaceBetween: 20
                     },
                     992: {
-                        slidesPerView: 3,
-                        spaceBetween: 20
+                        slidesPerView: 4,
+                        spaceBetween: 25
                     }
                 }
             });
@@ -8745,7 +8609,7 @@
                 modules: [ Navigation, Pagination ],
                 observer: true,
                 observeParents: true,
-                slidesPerView: 1.5,
+                slidesPerView: 2.5,
                 spaceBetween: 10,
                 autoHeight: true,
                 speed: 800,
@@ -8759,16 +8623,16 @@
                 },
                 breakpoints: {
                     640: {
-                        slidesPerView: 2.5,
+                        slidesPerView: 4,
                         spaceBetween: 20,
                         autoHeight: true
                     },
                     768: {
-                        slidesPerView: 3.5,
+                        slidesPerView: 5,
                         spaceBetween: 20
                     },
                     992: {
-                        slidesPerView: 4,
+                        slidesPerView: 6,
                         spaceBetween: 30
                     }
                 },
@@ -10840,6 +10704,29 @@ PERFORMANCE OF THIS SOFTWARE.
             }));
             flsModules.gallery = galleyItems;
         }
+        const galleryBody = document.querySelector("[data-gallery2]");
+        if (galleryBody) {
+            const galleryItems = galleryBody.querySelectorAll(".gallery__item");
+            const itemsData = Array.from(galleryItems).map((item => ({
+                src: item.getAttribute("href"),
+                thumb: item.querySelector("img").src,
+                subHtml: item.querySelector("img").alt || ""
+            })));
+            const gallery = lightgallery_es5(galleryBody, {
+                plugins: [ lg_zoom_min, lg_thumbnail_min, lg_video_min ],
+                licenseKey: "7EC452A9-0CFD441C-BD984C7C-17C8456E",
+                speed: 500,
+                dynamic: true,
+                dynamicEl: itemsData
+            });
+            galleryItems.forEach(((item, index) => {
+                item.addEventListener("click", (e => {
+                    e.preventDefault();
+                    gallery.openGallery(index);
+                }));
+            }));
+            flsModules.gallery = gallery;
+        }
         class DynamicAdapt {
             constructor(type) {
                 this.type = type;
@@ -10928,21 +10815,23 @@ PERFORMANCE OF THIS SOFTWARE.
             const squareInput = document.getElementById("squareInput");
             const resultElement = document.getElementById("result");
             const totalPriceInput = document.getElementById("totalPrice");
+            if (!squareInput || !resultElement || !totalPriceInput) return;
             function calculateTotal() {
                 const square = parseFloat(squareInput.value) || 0;
                 const price = parseFloat(squareInput.dataset.price) || 299;
                 const total = Math.round(square * price);
-                resultElement.textContent = total;
+                resultElement.textContent = total.toLocaleString("ru-RU");
                 totalPriceInput.value = total;
             }
             squareInput.addEventListener("input", calculateTotal);
             squareInput.addEventListener("keypress", (function(e) {
-                if ([ "e", "-", "+", "," ].includes(e.key)) e.preventDefault();
+                if ([ "e", "E", "-", "+", "," ].includes(e.key)) e.preventDefault();
             }));
             calculateTotal();
         }));
         const timerDisplay = document.getElementById("timer");
         function updateTimer() {
+            if (!timerDisplay) return;
             const now = new Date;
             const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
             const diff = tomorrow - now;
@@ -10952,8 +10841,10 @@ PERFORMANCE OF THIS SOFTWARE.
             timerDisplay.textContent = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
             if (diff <= 1e3) setTimeout(updateTimer, 1e3);
         }
-        updateTimer();
-        setInterval(updateTimer, 1e3);
+        if (timerDisplay) {
+            updateTimer();
+            setInterval(updateTimer, 1e3);
+        }
         document.addEventListener("DOMContentLoaded", (() => {
             const initDynamicLists = () => {
                 document.querySelectorAll("[data-dynamic-list]").forEach((container => {
@@ -11004,33 +10895,48 @@ PERFORMANCE OF THIS SOFTWARE.
         function calculatePrice() {
             const material = document.getElementById("material");
             const color = document.getElementById("color");
+            if (!material || !color) return;
             const squareInput = document.getElementById("square");
             const fixturesInput = document.getElementById("fixtures");
             const cornersInput = document.getElementById("corners");
             const discountInput = document.getElementById("discount");
-            const basePrice = parseFloat(material.options[material.selectedIndex].dataset.price);
-            const colorAdd = parseFloat(color.options[color.selectedIndex].dataset.priceAdd || 0);
-            const squarePrice = parseFloat(squareInput.dataset.price);
-            const fixturePrice = parseFloat(fixturesInput.dataset.price);
-            const cornerPrice = parseFloat(cornersInput.dataset.price);
-            const square = parseFloat(squareInput.value) || 0;
-            const fixtures = parseFloat(fixturesInput.value) || 0;
-            const corners = parseFloat(cornersInput.value) || 0;
+            const selectedMaterial = material.options[material.selectedIndex];
+            const selectedColor = color.options[color.selectedIndex];
+            if (!selectedMaterial || !selectedColor) return;
+            const basePrice = parseFloat(selectedMaterial.dataset.price) || 0;
+            const colorAdd = parseFloat(selectedColor.dataset.priceAdd || 0);
+            const squarePrice = parseFloat(squareInput?.dataset.price || 0);
+            const fixturePrice = parseFloat(fixturesInput?.dataset.price || 0);
+            const cornerPrice = parseFloat(cornersInput?.dataset.price || 0);
+            const square = parseFloat(squareInput?.value) || 0;
+            const fixtures = parseFloat(fixturesInput?.value) || 0;
+            const corners = parseFloat(cornersInput?.value) || 0;
             const discount = parseFloat(discountInput?.value) || 0;
             const materialCost = (basePrice + colorAdd) * square;
             const total = materialCost + fixtures * fixturePrice + corners * cornerPrice + square * squarePrice;
             const totalWithDiscount = total * (1 - discount / 100);
-            document.getElementById("ceilingCost").textContent = Math.round(total);
-            document.getElementById("ceilingFinalPrice").textContent = Math.round(totalWithDiscount);
+            const ceilingCost = document.getElementById("ceilingCost");
+            const ceilingFinalPrice = document.getElementById("ceilingFinalPrice");
+            if (ceilingCost) ceilingCost.textContent = Math.round(total);
+            if (ceilingFinalPrice) ceilingFinalPrice.textContent = Math.round(totalWithDiscount);
         }
-        document.querySelectorAll("select, input").forEach((el => {
-            el.addEventListener("input", calculatePrice);
-            el.addEventListener("change", calculatePrice);
+        document.addEventListener("DOMContentLoaded", (function() {
+            const inputsAndSelects = document.querySelectorAll("select, input");
+            if (inputsAndSelects.length > 0) {
+                inputsAndSelects.forEach((el => {
+                    el.addEventListener("input", calculatePrice);
+                    el.addEventListener("change", calculatePrice);
+                }));
+                calculatePrice();
+            } else console.error("No select or input elements found");
         }));
-        window.addEventListener("DOMContentLoaded", calculatePrice);
         document.addEventListener("DOMContentLoaded", (() => {
             const menu = document.querySelector(".menu");
+            function isMobileView() {
+                return window.innerWidth <= 991.98;
+            }
             menu.addEventListener("click", (function(e) {
+                if (!isMobileView()) return;
                 const targetElement = e.target;
                 const menuItem = targetElement.closest(".menu__item");
                 if (menuItem) {
@@ -11052,6 +10958,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
             }));
             document.addEventListener("click", (function(e) {
+                if (!isMobileView()) return;
                 if (!e.target.closest(".menu")) closeAllSubmenus();
             }));
             function closeAllSubmenus() {
@@ -11059,9 +10966,64 @@ PERFORMANCE OF THIS SOFTWARE.
                     el.classList.remove("active");
                 }));
             }
+            window.addEventListener("resize", (function() {
+                if (!isMobileView()) closeAllSubmenus();
+            }));
+        }));
+        document.addEventListener("DOMContentLoaded", (function() {
+            const range = document.getElementById("myRange");
+            const rangeValueInput = document.getElementById("rangeValue");
+            if (!range || !rangeValueInput) return;
+            rangeValueInput.addEventListener("input", (function() {
+                let value = parseInt(this.value) || 0;
+                const min = parseInt(range.min) || 0;
+                const max = parseInt(range.max) || 100;
+                if (value < min) value = min;
+                if (value > max) value = max;
+                range.value = value;
+                updateSliderStyle(value, range);
+            }));
+            range.addEventListener("input", (function() {
+                rangeValueInput.value = this.value;
+                updateSliderStyle(this.value, range);
+            }));
+            updateSliderStyle(range.value, range);
+        }));
+        function updateSliderStyle(value, sliderElement) {
+            const max = parseInt(sliderElement.max) || 100;
+            const percent = value / max * 100;
+            sliderElement.style.setProperty("--value-percent", `${percent}%`);
+        }
+        document.addEventListener("DOMContentLoaded", (function() {
+            const navButton = document.querySelector(".nav");
+            const pageHeight = document.body.scrollHeight;
+            const triggerPoint = .5 * pageHeight;
+            window.addEventListener("scroll", (function() {
+                const scrollProgress = window.scrollY / triggerPoint;
+                if (scrollProgress >= 1) {
+                    navButton.style.opacity = "1";
+                    navButton.style.visibility = "visible";
+                } else {
+                    navButton.style.opacity = "0";
+                    navButton.style.visibility = "hidden";
+                }
+            }));
+        }));
+        document.addEventListener("DOMContentLoaded", (function() {
+            const currentPageUrl = window.location.pathname.split("/").pop() || "index.html";
+            const menuLinks = document.querySelectorAll(".menu__link[href]");
+            menuLinks.forEach((link => {
+                const linkUrl = link.getAttribute("href").split("/").pop();
+                if (linkUrl === currentPageUrl) {
+                    link.classList.add("active");
+                    link.closest(".menu__item").classList.add("active");
+                }
+                if ("index.html" === currentPageUrl && "#" === link.getAttribute("href")) link.classList.add("active");
+            }));
         }));
         window["FLS"] = true;
         isWebp();
+        addLoadedClass();
         menuInit();
         spollers();
         showMore();
